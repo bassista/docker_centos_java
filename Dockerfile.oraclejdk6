@@ -18,7 +18,7 @@ FROM centos
 
 MAINTAINER Paolo Antinori <paolo.antinori@gmail.com>
 
-RUN wget --no-cookies --no-check-certificate --header "Cookie: s_nr=1392485761197; s_cc=true; gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavasebusiness%2Fdownloads%2Fjava-archive-downloads-javase6-419409.html%23jdk-6u45-oth-JPR; s_sq=%5B%5BB%5D%5D; gpv_p24=no%20value; OHS-edelivery.oracle.com-80=1134234243A7175839D327A7DDB820B1AF39AEA732F8C1D60C3D636881F29F0441BDDCE963F6E0ED4DDDE6B3E6A83F1099ECE8209BCFF46E9F12D01F0F81E959ACFF501624DDF2CC2408DB0D565BB123078A88DC870E7030642A7965EF46054CD671C4E4BC21719324DCB56D862FFC195E7DCE7445D4694012C10C7D182016F664A1CBDD15D75E220B20914A6ED0CC5CD1E97A05058A5B71CCB0FBFB690FBA6E4412DF133591AE77AF26E714672EA1F5286133BC275058FCE5F43C98A345772D373BCD4E35A33BCB82F25EC5CE4CE1418D27D3D3FEB1614091B1B533EBD21366CB122E521EB718363F058A2D63C958A2E36103F5ECC9CCDE" http://download.oracle.com/otn/java/jdk/6u45-b06/jdk-6u45-linux-x64-rpm.bin -O jdk-linux-x64.rpm.bin
+RUN wget --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com" "http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64-rpm.bin" --no-check-certificate -O jdk-linux-x64.rpm.bin
 RUN sh jdk-linux-x64.rpm.bin
 
 RUN rm jdk-linux-x64.rpm.bin
