@@ -18,7 +18,8 @@ FROM centos
 
 MAINTAINER Paolo Antinori <paolo.antinori@gmail.com>
 
-RUN wget --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com" "http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64-rpm.bin" --no-check-certificate -O jdk-linux-x64.rpm.bin
+RUN wget --continue --no-check-certificate --header "Cookie: oraclelicense=a" -O jdk-linux-x64.rpm.bin "http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64-rpm.bin"
+
 RUN sh jdk-linux-x64.rpm.bin
 
 RUN rm jdk-linux-x64.rpm.bin

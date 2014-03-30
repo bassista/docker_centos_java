@@ -1,5 +1,5 @@
 #################################################################
-# Creates a base CentOS 6 image with Oracle Java 7
+# Creates a base CentOS 6 image with OpenJDK 7
 #
 #                    ##        .
 #              ## ## ##       ==
