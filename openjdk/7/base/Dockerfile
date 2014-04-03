@@ -1,5 +1,5 @@
 #################################################################
-# Creates a base CentOS 6 image with Oracle Java 7
+# Creates a base CentOS 6 image with OpenJDK 7
 #
 #                    ##        .
 #              ## ## ##       ==
@@ -18,13 +18,9 @@ FROM centos
 
 MAINTAINER Paolo Antinori <paolo.antinori@gmail.com>
 
-RUN wget --continue --no-check-certificate --header "Cookie: oraclelicense=a" -O jdk-linux-x64.rpm.bin "http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64-rpm.bin"
+RUN yum install -y java-1.7.0-openjdk-devel which
 
-RUN sh jdk-linux-x64.rpm.bin
-
-RUN rm jdk-linux-x64.rpm.bin
-
-ENV JAVA_HOME /usr/java/default
+ENV JAVA_HOME /usr/lib/jvm/java-openjdk
+ENV LANG en_GB.utf8
 
 
- 
